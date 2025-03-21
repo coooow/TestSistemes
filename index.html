@@ -11,90 +11,93 @@
 </head>
 
 <body>
-    <div id="title">
-        <h1>Operating Systems Practice Test</h1>
-    </div>
-    <div id="temas">
-        <div id="tema1">
-            <input type="checkbox" name="tema" id="tema1">
-            <label id="labelTema1" for="tema1">Tema 1</label>
+    <div id="menu">
+        <div id="title">
+            <h1>Operating Systems Practice Test</h1>
+            <h2>Choose a topic below</h2>
         </div>
-        <div id="tema2">
-            <input type="checkbox" name="tema" id="tema2">
-            <label id="labelTema2" for="tema2">Tema 2</label>
-        </div>
-        <div id="tema3">
-            <input type="checkbox" name="tema" id="tema3">
-            <label id="labelTema3" for="tema3">Tema 3</label>
-        </div>
-        <div id="tema4">
-            <input type="checkbox" name="tema" id="tema4">
-            <label id="labelTema4" for="tema4">Tema 4</label>
-        </div>
-        <div id="tema5">
-            <input type="checkbox" name="tema" id="tema5">
-            <label id="labelTema5" for="tema5">Tema 5</label>
-        </div>
-        <div id="tema6">
-            <input type="checkbox" name="tema" id="tema6">
-            <label id="labelTema6" for="tema6">Tema 6</label>
-        </div>
-        <div id="tema7">
-            <input type="checkbox" name="tema" id="tema7">
-            <label id="labelTema7" for="tema7">Tema 7</label>
+        <div id="options">
+            <table>
+                <tr>
+                    <td>
+                        <button id="tema1" onclick="selectTema(1)">Tema 1</button>
+                        <button id="tema2" onclick="selectTema(2)">Tema 2</button>
+                        <button id="tema3" onclick="selectTema(3)">Tema 3</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="tema4" onclick="selectTema(4)">Tema 4</button>
+                        <button id="tema5" onclick="selectTema(5)">Tema 5</button>
+                        <button id="tema6" onclick="selectTema(6)">Tema 6</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="tema7" onclick="selectTema(7)">Tema 7</button>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
-    <div id="counter">
-        <h2 id="counterTitle">Correct answer counter</h2>
-        <h2 id="counterText"></h2>
-    </div>
-    <div id="qna">
-        <table>
-            <tr>
-                <td>
-                    <div id="question">
-                        <h2 id="questionText">Question</h2>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="answers">
-                        <div id="answer1div">
-                            <input type="radio" name="answer" id="answer1">
-                            <label id="label1" for="answer1">Answer 1</label>
+    <div id="testMenu">
+        <div id="title">
+            <h1>Operating Systems Practice Test</h1>
+        </div>
+        <div id="counter">
+            <h2 id="counterTitle">Correct answer counter</h2>
+            <h2 id="counterText"></h2>
+        </div>
+        <div id="qna">
+            <table>
+                <tr>
+                    <td>
+                        <div id="question">
+                            <h2 id="questionText">Question</h2>
                         </div>
-                        <div id="answer2div">
-                            <input type="radio" name="answer" id="answer2">
-                            <label id="label2" for="answer2">Answer 2</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="answers">
+                            <div id="answer1div">
+                                <input type="radio" name="answer" id="answer1">
+                                <label id="label1" for="answer1">Answer 1</label>
+                            </div>
+                            <div id="answer2div">
+                                <input type="radio" name="answer" id="answer2">
+                                <label id="label2" for="answer2">Answer 2</label>
+                            </div>
+                            <div id="answer3div">
+                                <input type="radio" name="answer" id="answer3">
+                                <label id="label3" for="answer3">Answer 3</label>
+                            </div>
+                            <div id="answer4div">
+                                <input type="radio" name="answer" id="answer4">
+                                <label id="label4" for="answer4">Answer 4</label>
+                            </div>
                         </div>
-                        <div id="answer3div">
-                            <input type="radio" name="answer" id="answer3">
-                            <label id="label3" for="answer3">Answer 3</label>
-                        </div>
-                        <div id="answer4div">
-                            <input type="radio" name="answer" id="answer4">
-                            <label id="label4" for="answer4">Answer 4</label>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="result">
+            <h3 id="correct">Correct answer!</h3>
+            <h3 id="wrong">Wrong answer!</h3>
+        </div>
+        <div id="button">
+            <button id="check" onclick="answer()">Submit</button>
+            <button id="next" onclick="nextQuestion()">Next Question</button>
+            <button id="unselect" onclick="unselect()">Uncheck an answer</button>
+            <button id="reset" onclick="resetCounter()">Reset counter</button>
+            <button id="questionReset" onclick="resetQuestions()">Reset questions</button>
+        </div>
+        <footer>
+            <p>Disclaimer: Since the teacher didn't give us the actual answers, some questions may have the wrong
+                answers</p>
+        </footer>
     </div>
-    <div id="result">
-        <h3 id="correct">Correct answer!</h3>
-        <h3 id="wrong">Wrong answer!</h3>
-    </div>
-    <div id="button">
-        <button id="check" onclick="answer()">Submit</button>
-        <button id="next" onclick="nextQuestion()">Next Question</button>
-        <button id="unselect" onclick="unselect()">Uncheck an answer</button>
-        <button id="reset" onclick="resetCounter()">Reset counter</button>
-        <button id="questionReset" onclick="resetQuestions()">Reset questions</button>
-    </div>
-    <footer>
-        <p>Disclaimer: Since the teacher didn't give us the actual answers, some questions may have the wrong answers</p>
-    </footer>
+
 </body>
 
 </html>

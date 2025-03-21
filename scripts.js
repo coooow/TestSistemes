@@ -14,19 +14,13 @@ var tema7 = [];
 var tema7copy = [];
 
 let currentQuestion;
-var selectedTemas = [];
+var selectedTema;
 var firstAnswer = true;
 var res = true;
 
 function nextQuestion() {
     unselect();
-    temasSelect();
     firstAnswer = true;
-
-    if(res){
-        resetQuestions();
-        res = false;
-    }
 
     var count = document.getElementById("counterText");
     var c = count.innerHTML.split("/");
@@ -35,60 +29,55 @@ function nextQuestion() {
     total++;
     count.innerHTML = correct + "/" + total;
 
-    if(selectedTemas.length === 0) {
-        alert("Please select a topic!");
-        return;
-    }
-
-    let k = Math.floor(Math.random() * selectedTemas.length);
-    let tema = selectedTemas[k].charAt(selectedTemas[k].length - 1);
     let qTitle = document.getElementById("questionText");
 
-    if(tema === "1") {
+    console.log(selectedTema);
+
+    if(selectedTema === 1) {
         if(tema1copy.length === 0) {
-            qTitle.innerHTML = "No questions available for Tema " + tema;
+            qTitle.innerHTML = "No questions available for Tema " + selectedTema;
             return;
         }
         let n = Math.floor(Math.random() * tema1copy.length);
         currentQuestion = tema1copy.splice(n, 1)[0];
-    } else if(tema === "2") {
+    } else if(selectedTema === 2) {
         if(tema2copy.length === 0) {
-            qTitle.innerHTML = "No questions available for Tema " + tema;
+            qTitle.innerHTML = "No questions available for Tema " + selectedTema;
             return;
         }
         let n = Math.floor(Math.random() * tema2copy.length);
         currentQuestion = tema2copy.splice(n, 1)[0];
-    } else if(tema === "3") {
+    } else if(selectedTema === 3) {
         if(tema3copy.length === 0) {
-            qTitle.innerHTML = "No questions available for Tema " + tema;
+            qTitle.innerHTML = "No questions available for Tema " + selectedTema;
             return;
         }
         let n = Math.floor(Math.random() * tema3copy.length);
         currentQuestion = tema3copy.splice(n, 1)[0];
-    } else if(tema === "4") {
+    } else if(selectedTema === 4) {
         if(tema4copy.length === 0) {
-            qTitle.innerHTML = "No questions available for Tema " + tema;
+            qTitle.innerHTML = "No questions available for Tema " + selectedTema;
             return;
         }
         let n = Math.floor(Math.random() * tema4copy.length);
         currentQuestion = tema4copy.splice(n, 1)[0];
-    } else if(tema === "5") {
+    } else if(selectedTema === 5) {
         if(tema5copy.length === 0) {
-            qTitle.innerHTML = "No questions available for Tema " + tema;
+            qTitle.innerHTML = "No questions available for Tema " +selectedTema;
             return;
         }
         let n = Math.floor(Math.random() * tema5copy.length);
         currentQuestion = tema5copy.splice(n, 1)[0];
-    } else if(tema === "6") {
+    } else if(selectedTema === 6) {
         if(tema6copy.length === 0) {
-            qTitle.innerHTML = "No questions available for Tema " + tema;
+            qTitle.innerHTML = "No questions available for Tema " + selectedTema;
             return;
         }
         let n = Math.floor(Math.random() * tema6copy.length);
         currentQuestion = tema6copy.splice(n, 1)[0];
-    } else if(tema === "7") {
+    } else if(selectedTema === 7) {
         if(tema7copy.length === 0) {
-            qTitle.innerHTML = "No questions available for Tema " + tema;
+            qTitle.innerHTML = "No questions available for Tema " + selectedTema;
             return;
         }
         let n = Math.floor(Math.random() * tema7copy.length);
@@ -158,21 +147,11 @@ function answer() {
 }
 
 function unselect() {
-    selectedTemas = [];
     document.getElementById("correct").style.display = "none";
     document.getElementById("wrong").style.display = "none";
     let answers = document.getElementsByName("answer");
     for(let i = 0; i < 4; i++) {
         answers[i].checked = false;
-    }
-}
-
-function temasSelect() {
-    temas = document.getElementsByName("tema");
-    for(let i = 0; i < temas.length; i++) {
-        if(temas[i].checked && !selectedTemas.includes(document.getElementById("labelTema" + (i+1)).innerHTML)) {
-            selectedTemas.push(document.getElementById("labelTema" + (i+1)).innerHTML);
-        }
     }
 }
 
@@ -189,4 +168,17 @@ function resetQuestions(){
     tema5copy = tema5.slice();
     tema6copy = tema6.slice();
     tema7copy = tema7.slice();
+}
+
+function selectTema(tema){
+    selectedTema = tema;
+    document.getElementById("testMenu").style.display = "block";
+    document.getElementById("menu").style.display = "none";
+    resetQuestions();
+    nextQuestion();   
+}
+
+function tornarMenu(){
+    document.getElementById("testMenu").style.display = "none";
+    document.getElementById("menu").style.display = "block";
 }
