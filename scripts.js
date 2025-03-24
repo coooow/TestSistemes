@@ -16,9 +16,13 @@ var tema7copy = [];
 let currentQuestion;
 var selectedTema;
 var firstAnswer = true;
-var res = true;
+var answered = true;
 
 function nextQuestion() {
+    if(!answered){
+        alert("Please answer the question before moving on!");
+        return;
+    }
     unselect();
     firstAnswer = true;
 
@@ -30,8 +34,6 @@ function nextQuestion() {
     count.innerHTML = correct + "/" + total;
 
     let qTitle = document.getElementById("questionText");
-
-    console.log(selectedTema);
 
     if(selectedTema === 1) {
         if(tema1copy.length === 0) {
@@ -90,6 +92,8 @@ function nextQuestion() {
         let a = document.getElementById("label" + i);
         a.innerHTML = answer;
     }
+
+    answered = false;
 }
 
 $(document).ready(function(){
@@ -109,19 +113,9 @@ $(document).ready(function(){
 });
 
 function answer() {
-    let selectedAnswer = null;
+    let selectedAnswer = isChecked();
     document.getElementById("correct").style.display = "none";
     document.getElementById("wrong").style.display = "none";
-    for(let i = 1; i < 5; i++) {
-        let answer = document.getElementById("answer" + i);
-        if(answer.checked) {
-            selectedAnswer = document.getElementById("label" + i).innerHTML;
-            break;
-        }
-    }
-    if(selectedAnswer === null) {
-        alert("Please select an answer!");
-    }
 
     for(let i = 0; i < 4; i++) {
         if(currentQuestion.answers[i].answer === selectedAnswer) {
@@ -144,6 +138,8 @@ function answer() {
     if(firstAnswer){
         firstAnswer = false;
     }
+
+    answered = true;
 }
 
 function unselect() {
@@ -175,10 +171,33 @@ function selectTema(tema){
     document.getElementById("testMenu").style.display = "block";
     document.getElementById("menu").style.display = "none";
     resetQuestions();
-    nextQuestion();   
+    nextQuestion();
+    answered = false;  
 }
 
 function tornarMenu(){
     document.getElementById("testMenu").style.display = "none";
     document.getElementById("menu").style.display = "block";
+    resetCounter();
+    answered = true;
+}
+
+function isChecked(){
+    let selectedAnswer = null;
+
+    if(document.getElementById("testMenu").style.display != "block"){
+        return;
+    }
+
+    for(let i = 1; i < 5; i++) {
+        let answer = document.getElementById("answer" + i);
+        if(answer.checked) {
+            selectedAnswer = document.getElementById("label" + i).innerHTML;
+            break;
+        }
+    }
+    if(selectedAnswer === null) {
+        alert("Please select an answer!");
+    }
+    return selectedAnswer;
 }
