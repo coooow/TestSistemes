@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div id="popupBg"></div>
     <div id="menu">
         <div id="title">
             <h1>Operating Systems Practice Test</h1>
@@ -35,6 +36,7 @@
                 <tr>
                     <td>
                         <button id="tema7" onclick="selectTema(7)">Tema 7</button>
+                        <button id="temaAll" onclick="selectTema(8)">Tots els temes</button>
                     </td>
                 </tr>
             </table>
@@ -84,6 +86,11 @@
         <div id="result">
             <h3 id="correct">Correct answer!</h3>
             <h3 id="wrong">Wrong answer!</h3>
+        </div>
+        <div id="finished">
+            <h2 id="finishedText">You have finished the test!</h2>
+            <button id="backtoMenuFinished" onclick="tornarMenu()">Go back to menu</button>
+            <button id="retry" onclick="retry()">Retry the test</button>
         </div>
         <div id="button">
             <button id="check" onclick="answer()">Submit</button>
