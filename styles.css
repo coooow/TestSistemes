@@ -71,8 +71,8 @@ footer{
 
 #counter{
     position: absolute;
-    top: 225px;
-    left: 1200px;
+    top: 30%;
+    left: 75%;
     font-size: 15px;
 }
 
@@ -103,6 +103,7 @@ footer{
 #finished{
     display: none;
     position: absolute;
+    border-radius: 10px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

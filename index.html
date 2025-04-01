@@ -5,56 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hola</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts.js"></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    
 </head>
 
-<body>
+<body class="selection:bg-fuchsia-500 selection:text-white selection:font-bold">
     <div id="popupBg"></div>
     <div id="menu">
         <div id="title">
-            <h1>Operating Systems Practice Test</h1>
-            <h2>Choose a topic below</h2>
+            <h1 class="text-5xl font-bold p-5 py-10">Operating Systems Practice Test</h1>
+            <h2 class="text-3xl">Choose a topic below</h2>
         </div>
         <div id="options">
             <table>
                 <tr>
                     <td>
-                        <button id="tema1" onclick="selectTema(1)">Tema 1</button>
-                        <button id="tema2" onclick="selectTema(2)">Tema 2</button>
-                        <button id="tema3" onclick="selectTema(3)">Tema 3</button>
+                        <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="tema1" onclick="selectTema(1)">Tema 1</button>
+                        <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="tema2" onclick="selectTema(2)">Tema 2</button>
+                        <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="tema3" onclick="selectTema(3)">Tema 3</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button id="tema4" onclick="selectTema(4)">Tema 4</button>
-                        <button id="tema5" onclick="selectTema(5)">Tema 5</button>
-                        <button id="tema6" onclick="selectTema(6)">Tema 6</button>
+                        <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="tema4" onclick="selectTema(4)">Tema 4</button>
+                        <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="tema5" onclick="selectTema(5)">Tema 5</button>
+                        <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="tema6" onclick="selectTema(6)">Tema 6</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button id="tema7" onclick="selectTema(7)">Tema 7</button>
-                        <button id="temaAll" onclick="selectTema(8)">Tots els temes</button>
+                        <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="tema7" onclick="selectTema(7)">Tema 7</button>
+                        <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="temaAll" onclick="selectTema(8)">Tots els temes</button>
                     </td>
                 </tr>
             </table>
         </div>
     </div>
     <div id="testMenu">
-        <div id="title">
+        <div class="text-5xl font-bold p-5 py-10" id="title">
             <h1>Operating Systems Practice Test</h1>
         </div>
         <div id="counter">
-            <h2 id="counterTitle">Correct answer counter</h2>
-            <h2 id="counterText"></h2>
+            <h2 class="text-2xl font-bold" id="counterTitle">Correct answer counter</h2>
+            <h2 class="text-2xl font-bold" id="counterText"></h2>
         </div>
         <div id="qna">
             <table>
                 <tr>
                     <td>
-                        <div id="question">
+                        <div class="text-3xl p-5 font-bold" id="question">
                             <h2 id="questionText">Question</h2>
                         </div>
                     </td>
@@ -83,25 +86,21 @@
                 </tr>
             </table>
         </div>
-        <div id="result">
+        <div class="font-bold" id="result">
             <h3 id="correct">Correct answer!</h3>
             <h3 id="wrong">Wrong answer!</h3>
         </div>
         <div id="finished">
-            <h2 id="finishedText">You have finished the test!</h2>
-            <button id="backtoMenuFinished" onclick="tornarMenu()">Go back to menu</button>
-            <button id="retry" onclick="retry()">Retry the test</button>
+            <h2 class="text-2xl font-bold py-3" id="finishedText">You have finished the test!</h2>
+            <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="backtoMenuFinished" onclick="tornarMenu()">Go back to menu</button>
+            <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="retry" onclick="retry()">Retry the test</button>
         </div>
         <div id="button">
-            <button id="check" onclick="answer()">Submit</button>
-            <button id="next" onclick="nextQuestion()">Next Question</button>
-            <button id="unselect" onclick="unselect()">Uncheck an answer</button>
-            <button id="backtoMenu" onclick="tornarMenu()">Go back to menu</button>
+            <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="check" onclick="answer()">Submit</button>
+            <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="next" onclick="nextQuestion()">Next Question</button>
+            <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="unselect" onclick="unselect()">Uncheck an answer</button>
+            <button class="bg-white hover:bg-gray-400 text-black border-b-4 border-gray-200 hover:border-gray-300 rounded" id="backtoMenu" onclick="tornarMenu()">Go back to menu</button>
         </div>
-        <footer>
-            <p>Disclaimer: Since the teacher didn't give us the actual answers, some questions may have the wrong
-                answers</p>
-        </footer>
     </div>
 
 </body>
