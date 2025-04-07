@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="selection:bg-fuchsia-500 selection:text-white selection:font-bold bg-zinc-300">
+<body class="bg-zinc-300">
     <div id="popupBg"></div>
     <div id="menu">
         <div id="title">
@@ -106,6 +106,12 @@
             <h3 id="correct">Correct answer!</h3>
             <h3 id="wrong">Wrong answer!</h3>
         </div>
+        <div class="flex items-center justify-center hidden" id="remind">
+            <div class="w-96 p-2 bg-red-300 border-2 border-red-500 rounded">
+                <h2 class="font-bold text-2xl">Please answer the question before moving on!</h2>
+            </div>
+        </div>
+
         <div id="finished">
             <h2 class="text-2xl font-bold py-3" id="finishedText">You have finished the test!</h2>
             <button

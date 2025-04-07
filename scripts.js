@@ -22,7 +22,7 @@ var answered = true;
 
 function nextQuestion() {
     if(!answered){
-        alert("Please answer the question before moving on!");
+        remindOpen();
         return;
     }
     unselect();
@@ -151,6 +151,7 @@ function answer() {
     }
 
     answered = true;
+    remindClose();
 }
 
 function unselect() {
@@ -229,4 +230,16 @@ function retry() {
     nextQuestion();
     answered = false;
     firstAnswer = true;
+}
+
+function remindOpen(){
+    var clase = document.getElementById("remind").className;
+    clase = clase.replace("hidden", "visible");
+    document.getElementById("remind").className = clase;
+}
+
+function remindClose(){
+    var clase = document.getElementById("remind").className;
+    clase = clase.replace("visible", "hidden");
+    document.getElementById("remind").className = clase;
 }
