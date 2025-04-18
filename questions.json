@@ -2973,5 +2973,667 @@
                 {"id": 4, "answer": "All of the above", "correct": true}
             ]
         }
+    ],
+    "temaFinal":[
+        {
+            "id": 1,
+            "question": "In order to increase overall computer system utilization, the operating system...",
+            "answers": [
+                {"id": 1, "answer": "...overlaps computation and I/O operations of various processes at the same time", "correct": true},
+                {"id": 2, "answer": "...moves the PCB of a blocked task to secondary storage to save primary memory (i.e., RAM)", "correct": false},
+                {"id": 3, "answer": "...disables interruptions while a process is executing to avoid process preemption", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 2,
+            "question": "What is the primary benefit of creating multiple threads within a single process?",
+            "answers": [
+                {"id": 1, "answer": "Improved performance due to increased concurrency within a process", "correct": false},
+                {"id": 2, "answer": "Easier management of shared resources between threads within a process", "correct": false},
+                {"id": 3, "answer": "Reduced context switch overhead when switching between threads within a process", "correct": false},
+                {"id": 4, "answer": "All of the above sentences are correct", "correct": true}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 3,
+            "question": "A disk scheduler is given the following sequence of accessed tracks: 55, 58, 39, 18, 90, 160, 150, 38, 184. If the operating system uses a SSFT policy, the head is currently at track 100, and progresses in increasing track number. What is the correct order in which the tracks are accessed?",
+            "answers": [
+                {"id": 1, "answer": "55, 58, 39, 18, 90, 160, 150, 38, 184", "correct": false},
+                {"id": 2, "answer": "90, 58, 55, 39, 38, 18, 150, 160, 184", "correct": true},
+                {"id": 3, "answer": "150, 160, 184, 90, 58, 55, 39, 38, 18", "correct": false},
+                {"id": 4, "answer": "150, 160, 184, 18, 38, 39, 55, 58, 90", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 4,
+            "question": "An operating system uses round robin scheduler to determine which task to execute next. If the processor runs at a frequency of 2 GHz and the quantum interval is set to 10 ms, how many instructions per quantum (IPQ) will each process execute on average? Assume that the processes do not perform any I/O operations that can trigger a context switch, and that context switch between processes does not require a significant amount of instructions.",
+            "answers": [
+                {"id": 1, "answer": "IPQ < 22.5 Minstructions/quantum", "correct": true},
+                {"id": 2, "answer": "22.5 ≤ IPQ < 25 Minstructions/quantum", "correct": false},
+                {"id": 3, "answer": "25 ≤ IPQ < 27.5 Minstructions/quantum", "correct": false},
+                {"id": 4, "answer": "IPQ ≥ 27.5 Minstructions/quantum", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 5,
+            "question": "What kind of inter-process communication mechanism allows to send and receive data from two unrelated processes?",
+            "answers": [
+                {"id": 1, "answer": "Signals", "correct": false},
+                {"id": 2, "answer": "Anonymous pipes", "correct": false},
+                {"id": 3, "answer": "Named pipes", "correct": true},
+                {"id": 4, "answer": "All of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 6,
+            "question": "Which of the following methods to allocate blocks in the hard disk to store files allows files to grow without a limit in the number of blocks, but suffers from performance issues due to the random access nature of block allocation and the fact that only one block can be read at a time?",
+            "answers": [
+                {"id": 1, "answer": "Indexed allocation", "correct": false},
+                {"id": 2, "answer": "Chained allocation", "correct": true},
+                {"id": 3, "answer": "Contiguous allocation", "correct": false},
+                {"id": 4, "answer": "All of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 7,
+            "question": "Which type of socket provides a service where data transmission is based on datagrams, and where delivery of packets and packet order is NOT guaranteed?",
+            "answers": [
+                {"id": 1, "answer": "RAW", "correct": false},
+                {"id": 2, "answer": "TCP", "correct": false},
+                {"id": 3, "answer": "UDP", "correct": true},
+                {"id": 4, "answer": "All sockets types provide reliable and ordered transmission", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 8,
+            "question": "Which synchronization primitive allows multiple processes or threads to wait simultaneously for an event?",
+            "answers": [
+                {"id": 1, "answer": "Mutex", "correct": false},
+                {"id": 2, "answer": "Semaphore (counting)", "correct": false},
+                {"id": 3, "answer": "Condition variable", "correct": true},
+                {"id": 4, "answer": "Monitor", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 9,
+            "question": "What is the system call required to destroy a named pipe once it is no longer required?",
+            "answers": [
+                {"id": 1, "answer": "unlink()", "correct": true},
+                {"id": 2, "answer": "close()", "correct": false},
+                {"id": 3, "answer": "dup()", "correct": false},
+                {"id": 4, "answer": "exit()", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 10,
+            "question": "An operating system uses indexed allocation with superblocks that only contain first level pointers to point to data stored on the disk. If each data block/sector is 4096 bytes and each pointer is 2 bytes, what is the maximum file that can be stored on the disk?",
+            "answers": [
+                {"id": 1, "answer": "2 Mbytes", "correct": false},
+                {"id": 2, "answer": "4 Mbytes", "correct": false},
+                {"id": 3, "answer": "8 Mbytes", "correct": true},
+                {"id": 4, "answer": "16 Mbytes", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 11,
+            "question": "A computer system with a single processor runs a multi-programmed operating system. At a certain time instant, 4 processes arrive as described in the table. If the operating system uses a round robin scheduler with q = 3, in which order will the processes finish executing? Assume that the time to perform a context change is zero.",
+            "answers": [
+                {"id": 1, "answer": "P3, P1, P2, P0", "correct": false},
+                {"id": 2, "answer": "P3, P0, P1, P2", "correct": false},
+                {"id": 3, "answer": "P3, P1, P0, P2", "correct": true},
+                {"id": 4, "answer": "P2, P1, P3, P0", "correct": false}
+            ],
+            "imgfile": "../images/tests/11.JPG"
+        },
+        {
+            "id": 12,
+            "question": "Regarding the implementation of machine-level concurrency mechanisms, such as the 'compare-and-swap' or the 'exchange' instructions, which of the following sentences is FALSE?",
+            "answers": [
+                {"id": 1, "answer": "They are implemented using interrupts", "correct": true},
+                {"id": 2, "answer": "They are simple and easy to verify", "correct": false},
+                {"id": 3, "answer": "They can be applied to any number of CPUs", "correct": false},
+                {"id": 4, "answer": "They support multiple critical sections", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 13,
+            "question": "Which of the following peripherals uses block-oriented data transfers?",
+            "answers": [
+                {"id": 1, "answer": "Keyboard", "correct": false},
+                {"id": 2, "answer": "Mouse", "correct": false},
+                {"id": 3, "answer": "Printer", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": true}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 14,
+            "question": "You have been tasked to design a scheduler for an operating system that will run in a real-time environment (i.e., controlling the ECU of a car). Which of the following aspects of the scheduler would be your top priority?",
+            "answers": [
+                {"id": 1, "answer": "Maximize system throughput", "correct": false},
+                {"id": 2, "answer": "Guarantee fairness among all processes", "correct": false},
+                {"id": 3, "answer": "Minimize response time for critical tasks", "correct": true},
+                {"id": 4, "answer": "A scheduler for a real-time environment should prioritize all the above aspects", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 15,
+            "question": "Regarding processes and threads, which of the following statements is FALSE?",
+            "answers": [
+                {"id": 1, "answer": "A process has its own memory space, while threads share memory with other threads of the same process", "correct": false},
+                {"id": 2, "answer": "To communicate between them, threads must use IPC mechanisms provided by the operating system, such as pipes", "correct": true},
+                {"id": 3, "answer": "On a computer with multiple CPUs, the scheduler can schedule multiple threads of the same process to be executed in different CPUs at the same time", "correct": false},
+                {"id": 4, "answer": "To store the state of the CPU (i.e., program counter and registers), each thread of a process uses a data structure named TCB", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 16,
+            "question": "Which data structure of an application contains the parameters and the local variables of the function currently being executed?",
+            "answers": [
+                {"id": 1, "answer": "Heap", "correct": false},
+                {"id": 2, "answer": "Stack", "correct": true},
+                {"id": 3, "answer": "PCB", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 17,
+            "question": "Which of the following schedulers is preemptive and does not suffer from process starvation, but typically penalizes short processes?",
+            "answers": [
+                {"id": 1, "answer": "FCFS", "correct": false},
+                {"id": 2, "answer": "SPN", "correct": false},
+                {"id": 3, "answer": "SRT", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": true}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 18,
+            "question": "A system has two processes to execute. The first process arrives at the system at time T₀ = 0, has a service time Tₛ = 10, and finishes execution at time T𝒻 = 25. The second process arrives at the system at time T₀ = 5, has a service time Tₛ = 5, and finishes execution at time T𝒻 = 20. What is the normalized turnaround time Tₙ of each process?",
+            "answers": [
+                {"id": 1, "answer": "1st process Tₙ = 2.5, 2nd process Tₙ = 3", "correct": true},
+                {"id": 2, "answer": "1st process Tₙ = 3, 2nd process Tₙ = 2.5", "correct": false},
+                {"id": 3, "answer": "1st process Tₙ = 2.5, 2nd process Tₙ = 4", "correct": false},
+                {"id": 4, "answer": "1st process Tₙ = 4, 2nd process Tₙ = 2.5", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 19,
+            "question": "What is the main requirement of a multi-programmed operating system?",
+            "answers": [
+                {"id": 1, "answer": "The underlying computer system must have more than one processor", "correct": false},
+                {"id": 2, "answer": "The operating system must be able to accommodate more than one process in memory", "correct": true},
+                {"id": 3, "answer": "The operating system must be able to support more than one user", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 20,
+            "question": "Which of the following mechanisms to manage free space on the disk is considered slow because it requires the operating system to traverse the list of free blocks every time an occupied block is freed?",
+            "answers": [
+                {"id": 1, "answer": "Bit tables", "correct": false},
+                {"id": 2, "answer": "Chained allocation", "correct": true},
+                {"id": 3, "answer": "Indexed allocation", "correct": false},
+                {"id": 4, "answer": "All of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 21,
+            "question": "Which RAID mechanism uses redundant distributed parity, allowing two disks to fail before the array is at risk of losing data?",
+            "answers": [
+                {"id": 1, "answer": "RAID 1", "correct": false},
+                {"id": 2, "answer": "RAID 5", "correct": false},
+                {"id": 3, "answer": "RAID 6", "correct": true},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 22,
+            "question": "In an operating system, which part of the kernel is responsible to save the context of the running process from the CPU to its PCB, and to restore the context of the next process to be executed from its PCB to the CPU?",
+            "answers": [
+                {"id": 1, "answer": "Long-term scheduler", "correct": false},
+                {"id": 2, "answer": "Mid-term scheduler", "correct": false},
+                {"id": 3, "answer": "Short-term scheduler", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": true}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 23,
+            "question": "A DVD disk has the same structure as a hard disk, with 36892 tracks/disk, 16384 sectors/track, and 2048 bytes/sector. The rotational speed of a DVD is 1500 rpm and the average seek time is 150 ms. If we want to read a file that occupies 32 Mbytes and is stored sequentially, what is the average transfer speed (Rₐ) expressed in Mbytes/s?",
+            "answers": [
+                {"id": 1, "answer": "Ra < 10 Mbytes/s", "correct": false},
+                {"id": 2, "answer": "10 ≤ Ra < 50 Mbytes/s", "correct": false},
+                {"id": 3, "answer": "50 ≤ Ra < 100 Mbytes/s", "correct": false},
+                {"id": 4, "answer": "Ra ≥ 100 Mbytes/s", "correct": true}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 24,
+            "question": "What is the concept that matches the following definition: 'A situation in which two or more processes are unable to continue executing because each one is waiting for a resource that is being withheld by the other'?",
+            "answers": [
+                {"id": 1, "answer": "Deadlock", "correct": true},
+                {"id": 2, "answer": "Mutual exclusion", "correct": false},
+                {"id": 3, "answer": "Race condition", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 25,
+            "question": "A parent process creates a child process using a fork() system call. If the parent process finishes executing before the child process does, the child becomes orphan. Which system process inherits the orphan child, ensuring that it does not stay in zombie state forever once it finishes executing?",
+            "answers": [
+                {"id": 1, "answer": "Bash", "correct": false},
+                {"id": 2, "answer": "Init", "correct": true},
+                {"id": 3, "answer": "Scheduler", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 26,
+            "question": "When a process executes a forbidden instruction (i.e., dividing by zero or trying to write to a forbidden memory position) that leads to a segmentation fault, what signal does the operating system send to the process, allowing it to detect the error and terminate properly?",
+            "answers": [
+                {"id": 1, "answer": "SIGINT", "correct": false},
+                {"id": 2, "answer": "SIGTERM", "correct": false},
+                {"id": 3, "answer": "SIGKILL", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": true}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 27,
+            "question": "An operating system uses bit tables to manage the free blocks on the disk. The disk has a total space of 1 Tbyte and blocks have a size of 4 kbytes. How many blocks are required to store the free space bit table in the disk? Remember that you need 1 bit to determine if each block is free or occupied.",
+            "answers": [
+                {"id": 1, "answer": "8192 blocks", "correct": true},
+                {"id": 2, "answer": "4096 blocks", "correct": false},
+                {"id": 3, "answer": "2048 blocks", "correct": false},
+                {"id": 4, "answer": "1024 blocks", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 28,
+            "question": "When a process that is executing in the CPU makes a system call to perform an I/O operation (i.e., read or write from/to a file), to which state does it transition to, while waiting for the I/O operation to finish?",
+            "answers": [
+                {"id": 1, "answer": "Ready", "correct": false},
+                {"id": 2, "answer": "Suspended", "correct": false},
+                {"id": 3, "answer": "Running", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": true}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 29,
+            "question": "Which part of the operating system is responsible to receive commands from the user through the keyboard and to show the results of the computation through the screen?",
+            "answers": [
+                {"id": 1, "answer": "Kernel", "correct": false},
+                {"id": 2, "answer": "Scheduler", "correct": false},
+                {"id": 3, "answer": "Shell", "correct": true},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 30,
+            "question": "What is the name of the table that stores the file status flags (i.e., read or write), the current file offset (i.e., the amount of bytes that have been read/written so far), and a reference count (i.e., the number of processes that have opened the file)?",
+            "answers": [
+                {"id": 1, "answer": "File descriptor table", "correct": false},
+                {"id": 2, "answer": "Open file table", "correct": true},
+                {"id": 3, "answer": "Vnode table", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 31,
+            "question": "In which I/O mode an external peripheral connected to the memory and the peripherals is used to perform I/O operations without requiring the CPU intervention, thus allowing it to execute other processes while the transfer is performed?",
+            "answers": [
+                {"id": 1, "answer": "DMA-based I/O", "correct": true},
+                {"id": 2, "answer": "Interrupt-driven I/O (blocking)", "correct": false},
+                {"id": 3, "answer": "Interrupt-driven I/O (non-blocking)", "correct": false},
+                {"id": 4, "answer": "Programmed I/O", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 32,
+            "question": "What is the main drawback of using the contiguous allocation method to store files in the hard disk?",
+            "answers": [
+                {"id": 1, "answer": "It requires to declare the size of the file at creation time", "correct": false},
+                {"id": 2, "answer": "It is difficult to accommodate changes to files (i.e., adding or removing blocks)", "correct": false},
+                {"id": 3, "answer": "It suffers from external fragmentation, especially as the disk becomes full", "correct": false},
+                {"id": 4, "answer": "All of the above are drawbacks of the contiguous allocation method", "correct": true}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 33,
+            "question": "Which disk scheduling policy minimizes the seek time between consecutive I/O operations?",
+            "answers": [
+                {"id": 1, "answer": "SSTF", "correct": true},
+                {"id": 2, "answer": "FIFO", "correct": false},
+                {"id": 3, "answer": "SCAN", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 34,
+            "question": "Regarding named and unnamed pipes used for inter-process communication, which of the following statements is FALSE?",
+            "answers": [
+                {"id": 1, "answer": "By default pipes are blocking, so if a process tries to read from an empty pipe it will block until data is available", "correct": false},
+                {"id": 2, "answer": "Unnamed pipes can be used for communication between unrelated processes as long as both processes have sufficient permissions", "correct": true},
+                {"id": 3, "answer": "A named pipe is similar to a file, requiring both processes sharing it to agree on a name to use it", "correct": false},
+                {"id": 4, "answer": "Regardless of their type, pipes require two file descriptors, one for reading from the pipe and one for writing to the pipe", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 35,
+            "question": "What is the concept described by the following definition: 'The ratio between the time that a process spends in the system and the amount of time that a process needs to be in the CPU to complete execution'?",
+            "answers": [
+                {"id": 1, "answer": "Turnaround time", "correct": false},
+                {"id": 2, "answer": "Service time", "correct": false},
+                {"id": 3, "answer": "Throughput", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": true}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 36,
+            "question": "An operating system uses chained allocation to store data on the hard disk. If the hard disk is 2 Tbytes and each block (or sector) is 2048 bytes, what is the appropriate size of pointers to data blocks (or sectors)?",
+            "answers": [
+                {"id": 1, "answer": "4 bytes", "correct": true},
+                {"id": 2, "answer": "3 bytes", "correct": false},
+                {"id": 3, "answer": "2 bytes", "correct": false},
+                {"id": 4, "answer": "1 byte", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 37,
+            "question": "You are given the source code of a program that creates three threads (A, B, and C), as displayed in the code snippet. There are three semaphores initialized as follows: S1=0, S2=0, and S3=1. The variable 'op' is initialized to 0, shared in memory, and can be accessed by all three threads. What is the output of the printf() statement executed by thread C?",
+            "answers": [
+                {"id": 1, "answer": "The output of the printf() statement will be 'op=4'", "correct": false},
+                {"id": 2, "answer": "The output of the printf() statement will be 'op=5'", "correct": true},
+                {"id": 3, "answer": "The output of the printf() statement will be 'op=6'", "correct": false},
+                {"id": 4, "answer": "Thread C will never execute, so the printf() statement will not be printed", "correct": false}
+            ],
+            "imgfile": "../images/tests/37.JPG"
+        },
+        {
+            "id": 38,
+            "question": "A process that has finished executing and is in the zombie state is waiting for:",
+            "answers": [
+                {"id": 1, "answer": "The long-term scheduler to move the process from secondary storage to main memory", "correct": false},
+                {"id": 2, "answer": "The mid-term scheduler to preempt the process that is currently executing", "correct": false},
+                {"id": 3, "answer": "The short-term scheduler to allow its parent to execute and collect its exit status", "correct": true},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 39,
+            "question": "The call to listen(int sockfd, int backlog) marks the socket referred to by sockfd as a passive socket that will be used to accept incoming connections. Which of the following statements is TRUE regarding the use of the backlog parameter?",
+            "answers": [
+                {"id": 1, "answer": "It defines which kind of socket to create, 0 for stream (TCP) and 1 for datagram (UDP)", "correct": false},
+                {"id": 2, "answer": "It defines the number of processes/threads that can read/write from the socket concurrently", "correct": false},
+                {"id": 3, "answer": "It defines the maximum length to which the queue of pending connections for sockfd may grow", "correct": true},
+                {"id": 4, "answer": "None of the statements regarding the backlog parameter is true", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 40,
+            "question": "What is the main objective of the operating system scheduler?",
+            "answers": [
+                {"id": 1, "answer": "To minimize process waiting time", "correct": false},
+                {"id": 2, "answer": "To maximize the processor utilization", "correct": false},
+                {"id": 3, "answer": "To distribute the processor equitably among processes", "correct": false},
+                {"id": 4, "answer": "All of the above", "correct": true}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 41,
+            "question": "When implementing a server that uses TCP sockets to communicate with a client, what is the correct order of the different system calls?",
+            "answers": [
+                {"id": 1, "answer": "bind(), socket(), listen(), accept(), close()", "correct": false},
+                {"id": 2, "answer": "socket(), bind(), listen(), accept(), close()", "correct": true},
+                {"id": 3, "answer": "socket(), bind(), accept(), listen(), close()", "correct": false},
+                {"id": 4, "answer": "socket(), listen(), bind(), accept(), close()", "correct": false}
+            ],
+            "imgfile": "../images/tests/41.JPG"
+        },
+        {
+            "id": 42,
+            "question": "What is the proper function call to allow a parent thread wait until the threads that are executing finish?",
+            "answers": [
+                {"id": 1, "answer": "pthread_wait()", "correct": false},
+                {"id": 2, "answer": "pthread_join()", "correct": true},
+                {"id": 3, "answer": "pthread_standby()", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 43,
+            "question": "What is the main advantage of using a Makefile in a C project?",
+            "answers": [
+                {"id": 1, "answer": "It ensures that all source files are compiled every time, regardless of changes", "correct": false},
+                {"id": 2, "answer": "It replaces the need for a compiler like gcc by executing the program directly", "correct": false},
+                {"id": 3, "answer": "It automates the build process by checking dependencies and compiling only modified files", "correct": true},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 44,
+            "question": "The following listing shows the output of the 'ls -la' command. What is the command that you have to execute to ensure that the permissions on file 'file1.txt' allows the following permissions: owner='-wx', group='r--', others='r-x'?",
+            "answers": [
+                {"id": 1, "answer": "chown 365 file1.txt", "correct": false},
+                {"id": 2, "answer": "chmod 635 file1.txt", "correct": false},
+                {"id": 3, "answer": "chmod 563 file1.txt", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": true}
+            ],
+            "imgfile": "../images/tests/44.JPG"
+        },
+        {
+            "id": 45,
+            "question": "The following C code is used to initialize a socket for a TCP client. Considering that a TCP or UDP port is 16 bits, what is the proper command to initialize the sin_port variable in the servaddr structure?",
+            "answers": [
+                {"id": 1, "answer": "ntohl(TCP_PORT)", "correct": false},
+                {"id": 2, "answer": "htons(TCP_PORT)", "correct": true},
+                {"id": 3, "answer": "htonl(TCP_PORT)", "correct": false},
+                {"id": 4, "answer": "It is not necessary to use any additional function to initialize the sin_port variable in the servaddr structure", "correct": false}
+            ],
+            "imgfile": "../images/tests/45.JPG"
+        },
+        {
+            "id": 46,
+            "question": "The program displayed in the code snippet has been compiled and is running in the system with PID=1234. What is the signal that needs to be registered so that the program is interrupted when the user presses 'CTRL+C'?",
+            "answers": [
+                {"id": 1, "answer": "SIGKILL", "correct": false},
+                {"id": 2, "answer": "SIGSEGV", "correct": false},
+                {"id": 3, "answer": "SIGTERM", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": true}
+            ],
+            "imgfile": "../images/tests/46.JPG"
+        },
+        {
+            "id": 47,
+            "question": "In a Linux machine named 'nethermir' you are logged in as a user named 'ptuset'. Your console is showing the output of the 'ls -la' command. If you want to move the file named 'resolv.conf' located in your home folder to the '/etc' folder, what command should you use?",
+            "answers": [
+                {"id": 1, "answer": "mv /home/ptuset/resolv.conf /etc", "correct": false},
+                {"id": 2, "answer": "mv ~/resolv.conf /etc", "correct": false},
+                {"id": 3, "answer": "mv resolv.conf /etc", "correct": false},
+                {"id": 4, "answer": "All the above options are correct", "correct": true}
+            ],
+            "imgfile": "../images/tests/47.JPG"
+        },
+        {
+            "id": 48,
+            "question": "Considering the following code snippet, which of the following sentences is TRUE? The command 'wc -l' counts the lines provided in the standard input, and writes the result to the standard output.",
+            "answers": [
+                {"id": 1, "answer": "The content of the file 'file2' after the program finishes will be '4'", "correct": false},
+                {"id": 2, "answer": "It executes the 'wc' command, redirecting the contents of the file named 'file1' to its standard input, and redirecting its standard output to the file named 'file2'", "correct": false},
+                {"id": 3, "answer": "It will count the number of lines in the file named 'file1', and write the number of lines to the file named 'file2'", "correct": false},
+                {"id": 4, "answer": "All the above sentences are true", "correct": true}
+            ],
+            "imgfile": "../images/tests/48.JPG"
+        },
+        {
+            "id": 49,
+            "question": "Consider the following snippet of C code that makes use of the fork() system call. What will the program print to the standard output when it finishes executing?",
+            "answers": [
+                {"id": 1, "answer": "The value of counter is 0 printed for each child process", "correct": false},
+                {"id": 2, "answer": "The value of counter is 1000 printed by the parent process", "correct": false},
+                {"id": 3, "answer": "The value of counter is 1001 printed by the parent process", "correct": false},
+                {"id": 4, "answer": "The call to printf will never be executed", "correct": true}
+            ],
+            "imgfile": "../images/tests/49.JPG"
+        },
+        {
+            "id": 50,
+            "question": "Complete the following code to properly open, write to, and close a file named 'file.txt' in C. You can assume that the required include statements are present and that function calls are always successful.",
+            "answers": [
+                {"id": 1, "answer": "fopen(), exit(), fwrite(), fclose(), fclsoe()", "correct": true},
+                {"id": 2, "answer": "open(), abort(), fwrite(), fclose(), close()", "correct": false},
+                {"id": 3, "answer": "fopen(), abort(), fprintf(), fclose(), close()", "correct": false},
+                {"id": 4, "answer": "fopen(), exit(), fseek(), fflush(), fclose()", "correct": false}
+            ],
+            "imgfile": "../images/tests/50.JPG"
+        },
+        {
+            "id": 51,
+            "question": "What happens when a child process successfully executes the execv() system call?",
+            "answers": [
+                {"id": 1, "answer": "The child process continues execution from the next line after execv() returns", "correct": false},
+                {"id": 2, "answer": "The child process is replaced by the new program passed to execv(), so the next lines in the original program are never executed", "correct": true},
+                {"id": 3, "answer": "There is no need to create a child process, since the execv() system call always creates a new process before executing a new program", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 52,
+            "question": "The following code snippet in C shows two threads, t1 and t2, that modify a variable named counter. To protect access to the variable and ensure that both threads take alternative turns to change its value, the program uses two mutex: mutexA and mutexB. Analysing the code, what is a potential problem that you can find when executing the program?",
+            "answers": [
+                {"id": 1, "answer": "Deadlock", "correct": true},
+                {"id": 2, "answer": "Starvation", "correct": false},
+                {"id": 3, "answer": "Race condition", "correct": false},
+                {"id": 4, "answer": "All of the above", "correct": false}
+            ],
+            "imgfile": "../images/tests/52.JPG"
+        },
+        {
+            "id": 53,
+            "question": "After executing line with call to dup2(), what is the state of the file descriptor table in the child process referenced by pid1?",
+            "answers": [
+                {"id": 1, "answer": "The standard input of the parent process points to the reading end of the pipe pfd", "correct": false},
+                {"id": 2, "answer": "The standard input of the child process points to the reading end of the pipe pfd", "correct": false},
+                {"id": 3, "answer": "The standard output of the parent process points to the writing end of the pipe pfd", "correct": false},
+                {"id": 4, "answer": "The standard output of the child process points to the writing end of the pipe pfd", "correct": true}
+            ],
+            "imgfile": "img/tema1.png"
+        },
+        {
+            "id": 54,
+            "question": "In Linux, the command 'ps aux' returns a list of all the processes in the system. What is the proper way to filter the output of the 'ps aux' command to filter only the processes that are executed by the user 'ptuset'?",
+            "answers": [
+                {"id": 1, "answer": "ps aux | grep ptuset", "correct": true},
+                {"id": 2, "answer": "ps aux | find ptuset", "correct": false},
+                {"id": 3, "answer": "ps aux | echo ptuset", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": "img/tema1.png"
+        },
+        {
+            "id": 55,
+            "question": "In C parameters to programs are passed using the argc and argv variables. When implementing the golflife.c program, the program expects three parameters: an integer n indicating the number of generations to simulate, the name of the boards text file, and the name of the output file. That is, './golflife 100 boards.txt output.txt'. How do you read the value of the variable indicating the number of generations to simulate (i.e., 100)?",
+            "answers": [
+                {"id": 1, "answer": "int generations = argc[1];", "correct": false},
+                {"id": 2, "answer": "int generations = argc[0];", "correct": false},
+                {"id": 3, "answer": "int generations = atoi(argv[1]);", "correct": true},
+                {"id": 4, "answer": "int generations = atoi(argv[0]);", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 56,
+            "question": "The following code snippet in C shows a program with two threads, threadA and threadB, that take turns at running a critical section that increments and prints a variable named counter. To implement the turns, the code uses two binary semaphores, semA and semB. What is the instruction that is missing in line 16 to ensure that threadA always starts executing?",
+            "answers": [
+                {"id": 1, "answer": "sem_init(&semB, 0, 0);", "correct": false},
+                {"id": 2, "answer": "sem_init(&semB, 0, 1);", "correct": true},
+                {"id": 3, "answer": "sem_init(&semB, 0, 2);", "correct": false},
+                {"id": 4, "answer": "sem_init(&semB, 1, 1);", "correct": false}
+            ],
+            "imgfile": "../images/tests/56.JPG"
+        },
+        {
+            "id": 57,
+            "question": "Which are the two atomic operations that can be performed on semaphores, either binary or counting, to acquire them or release them?",
+            "answers": [
+                {"id": 1, "answer": "signal and wait", "correct": true},
+                {"id": 2, "answer": "start and stop", "correct": false},
+                {"id": 3, "answer": "open and close", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 58,
+            "question": "In the terminal, how can you compile a file named 'program.c', which contains C source code, into a binary executable named 'program' using gcc?",
+            "answers": [
+                {"id": 1, "answer": "gcc -o program program.c", "correct": true},
+                {"id": 2, "answer": "gcc -o program.c program", "correct": false},
+                {"id": 3, "answer": "asm -o program program.c", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": ""
+        },
+        {
+            "id": 59,
+            "question": "What will be the output of the following code?\n\nint main(int argc, char* argv[]) {\n    int x = 1;\n    if (fork() == 0) {\n        x *= 2;\n        x += 2;\n    } else {\n        x += 5;\n    }\n    printf(\"x=%d\\n\", x);\n    return 0;\n}",
+            "answers": [
+                {"id": 1, "answer": "Parent and child processes print 'x = 8'", "correct": false},
+                {"id": 2, "answer": "Parent process prints 'x = 6' and child processes prints 'x = 3'", "correct": true},
+                {"id": 3, "answer": "Parent process prints 'x = 3' and child process prints 'x = 6'", "correct": false},
+                {"id": 4, "answer": "None of the above", "correct": false}
+            ],
+            "imgfile": "../images/tests/59.JPG"
+        },
+        {
+            "id": 60,
+            "question": "When multiple threads are accessing a shared variable, which of the following mechanisms CANNOT be used to implement the critical section?",
+            "answers": [
+                {"id": 1, "answer": "Mutex", "correct": false},
+                {"id": 2, "answer": "Binary semaphore", "correct": false},
+                {"id": 3, "answer": "Counting semaphore", "correct": true},
+                {"id": 4, "answer": "All of the above mechanisms can be used", "correct": false}
+            ],
+            "imgfile": ""
+        }
     ]
 }

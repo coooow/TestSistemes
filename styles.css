@@ -119,3 +119,10 @@ footer{
 #remind{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+#questionImage{
+    display: none;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}

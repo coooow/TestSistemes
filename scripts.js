@@ -14,6 +14,8 @@ var tema7 = [];
 var tema7copy = [];
 var temaAll = [];
 var temaAllcopy = [];
+var temaFinal = [];
+var temaFinalcopy = [];
 
 let currentQuestion;
 var selectedTema;
@@ -26,6 +28,7 @@ function nextQuestion() {
         return;
     }
     unselect();
+    resetImg();
     firstAnswer = true;
 
     let qTitle = document.getElementById("questionText");
@@ -87,6 +90,19 @@ function nextQuestion() {
 
         let n = Math.floor(Math.random() * temaAllcopy.length);
         currentQuestion = temaAllcopy.splice(n, 1)[0];
+    } else if (selectedTema === 9) {
+        if (temaFinalcopy.length === 0) {
+            showFinished();
+            return;
+        }
+
+        let n = Math.floor(Math.random() * temaFinalcopy.length);
+        currentQuestion = temaFinalcopy.splice(n, 1)[0];
+
+        if(currentQuestion.imgfile != ""){
+            document.getElementById("questionImage").style.display = "block";
+            document.getElementById("questionImg").src = currentQuestion.imgfile;
+        }
     }
 
     qTitle.innerHTML = currentQuestion.question;
@@ -118,6 +134,7 @@ $(document).ready(function () {
             tema5 = data.tema5 || [];
             tema6 = data.tema6 || [];
             tema7 = data.tema7 || [];
+            temaFinal = data.temaFinal || [];
             temaAll = tema1.concat(tema2, tema3, tema4, tema5, tema6, tema7);
         })
         .catch(error => console.error("Error loading JSON:", error));
@@ -129,7 +146,7 @@ function answer() {
     document.getElementById("wrong").style.display = "none";
 
     for (let i = 0; i < 4; i++) {
-        if (currentQuestion.answers[i].answer === selectedAnswer) {
+        if (i === selectedAnswer) {
             if (currentQuestion.answers[i].correct) {
                 document.getElementById("correct").style.display = "block";
                 if (firstAnswer) {
@@ -177,6 +194,7 @@ function resetQuestions() {
     tema6copy = tema6.slice();
     tema7copy = tema7.slice();
     temaAllcopy = temaAll.slice();
+    temaFinalcopy = temaFinal.slice();
 }
 
 function selectTema(tema) {
@@ -207,7 +225,7 @@ function isChecked() {
     for (let i = 1; i < 5; i++) {
         let answer = document.getElementById("answer" + i);
         if (answer.checked) {
-            selectedAnswer = document.getElementById("label" + i).innerHTML;
+            selectedAnswer = i-1;
             break;
         }
     }
@@ -242,4 +260,9 @@ function remindClose(){
     var clase = document.getElementById("remind").className;
     clase = clase.replace("visible", "hidden");
     document.getElementById("remind").className = clase;
+}
+
+function resetImg(){
+    document.getElementById("questionImage").style.display = "none";
+    document.getElementById("questionImg").src = "";
 }
