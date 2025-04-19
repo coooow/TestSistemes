@@ -3094,7 +3094,7 @@
                 {"id": 3, "answer": "P3, P1, P0, P2", "correct": true},
                 {"id": 4, "answer": "P2, P1, P3, P0", "correct": false}
             ],
-            "imgfile": "images/tests/11.jpg"
+            "imgfile": "./images/tests/11.JPG"
         },
         {
             "id": 12,
@@ -3380,7 +3380,7 @@
                 {"id": 3, "answer": "The output of the printf() statement will be 'op=6'", "correct": false},
                 {"id": 4, "answer": "Thread C will never execute, so the printf() statement will not be printed", "correct": false}
             ],
-            "imgfile": "images/tests/37.jpg"
+            "imgfile": "./images/tests/37.JPG"
         },
         {
             "id": 38,
@@ -3424,7 +3424,7 @@
                 {"id": 3, "answer": "socket(), bind(), accept(), listen(), close()", "correct": false},
                 {"id": 4, "answer": "socket(), listen(), bind(), accept(), close()", "correct": false}
             ],
-            "imgfile": "images/tests/41.jpg"
+            "imgfile": "./images/tests/41.JPG"
         },
         {
             "id": 42,
@@ -3457,7 +3457,7 @@
                 {"id": 3, "answer": "chmod 563 file1.txt", "correct": false},
                 {"id": 4, "answer": "None of the above", "correct": true}
             ],
-            "imgfile": "images/tests/44.jpg"
+            "imgfile": "./images/tests/44.JPG"
         },
         {
             "id": 45,
@@ -3468,7 +3468,7 @@
                 {"id": 3, "answer": "htonl(TCP_PORT)", "correct": false},
                 {"id": 4, "answer": "It is not necessary to use any additional function to initialize the sin_port variable in the servaddr structure", "correct": false}
             ],
-            "imgfile": "images/tests/45.jpg"
+            "imgfile": "./images/tests/45.JPG"
         },
         {
             "id": 46,
@@ -3479,7 +3479,7 @@
                 {"id": 3, "answer": "SIGTERM", "correct": false},
                 {"id": 4, "answer": "None of the above", "correct": true}
             ],
-            "imgfile": "images/tests/46.jpg"
+            "imgfile": "./images/tests/46.JPG"
         },
         {
             "id": 47,
@@ -3490,7 +3490,7 @@
                 {"id": 3, "answer": "mv resolv.conf /etc", "correct": false},
                 {"id": 4, "answer": "All the above options are correct", "correct": true}
             ],
-            "imgfile": "images/tests/47.jpg"
+            "imgfile": "./images/tests/47.JPG"
         },
         {
             "id": 48,
@@ -3501,7 +3501,7 @@
                 {"id": 3, "answer": "It will count the number of lines in the file named 'file1', and write the number of lines to the file named 'file2'", "correct": false},
                 {"id": 4, "answer": "All the above sentences are true", "correct": true}
             ],
-            "imgfile": "images/tests/48.jpg"
+            "imgfile": "./images/tests/48.JPG"
         },
         {
             "id": 49,
@@ -3512,7 +3512,7 @@
                 {"id": 3, "answer": "The value of counter is 1001 printed by the parent process", "correct": false},
                 {"id": 4, "answer": "The call to printf will never be executed", "correct": true}
             ],
-            "imgfile": "images/tests/49.jpg"
+            "imgfile": "./images/tests/49.JPG"
         },
         {
             "id": 50,
@@ -3523,7 +3523,7 @@
                 {"id": 3, "answer": "fopen(), abort(), fprintf(), fclose(), close()", "correct": false},
                 {"id": 4, "answer": "fopen(), exit(), fseek(), fflush(), fclose()", "correct": false}
             ],
-            "imgfile": "images/tests/50.jpg"
+            "imgfile": "./images/tests/50.JPG"
         },
         {
             "id": 51,
@@ -3545,7 +3545,7 @@
                 {"id": 3, "answer": "Race condition", "correct": false},
                 {"id": 4, "answer": "All of the above", "correct": false}
             ],
-            "imgfile": "images/tests/52.jpg"
+            "imgfile": "./images/tests/52.JPG"
         },
         {
             "id": 53,
@@ -3556,7 +3556,7 @@
                 {"id": 3, "answer": "The standard output of the parent process points to the writing end of the pipe pfd", "correct": false},
                 {"id": 4, "answer": "The standard output of the child process points to the writing end of the pipe pfd", "correct": true}
             ],
-            "imgfile": "images/tests/53.jpg"
+            "imgfile": "./images/tests/53.JPG"
         },
         {
             "id": 54,
@@ -3567,7 +3567,7 @@
                 {"id": 3, "answer": "ps aux | echo ptuset", "correct": false},
                 {"id": 4, "answer": "None of the above", "correct": false}
             ],
-            "imgfile": "images/tests/54.jpg"
+            "imgfile": "./images/tests/54.JPG"
         },
         {
             "id": 55,
@@ -3589,7 +3589,7 @@
                 {"id": 3, "answer": "sem_init(&semB, 0, 2);", "correct": false},
                 {"id": 4, "answer": "sem_init(&semB, 1, 1);", "correct": false}
             ],
-            "imgfile": "images/tests/56.jpg"
+            "imgfile": "./images/tests/56.JPG"
         },
         {
             "id": 57,
@@ -3622,7 +3622,7 @@
                 {"id": 3, "answer": "Parent process prints 'x = 3' and child process prints 'x = 6'", "correct": false},
                 {"id": 4, "answer": "None of the above", "correct": false}
             ],
-            "imgfile": "images/tests/59.jpg"
+            "imgfile": "./images/tests/59.JPG"
         },
         {
             "id": 60,
