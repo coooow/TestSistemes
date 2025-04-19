@@ -124,5 +124,13 @@ footer{
     display: none;
     margin: auto;
     width: 50%;
-    padding: 10px;
 }
+
+img	{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.5);
+    transform-origin: center center;
+    padding: 40px;
+}
+

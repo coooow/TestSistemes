@@ -3556,7 +3556,7 @@
                 {"id": 3, "answer": "The standard output of the parent process points to the writing end of the pipe pfd", "correct": false},
                 {"id": 4, "answer": "The standard output of the child process points to the writing end of the pipe pfd", "correct": true}
             ],
-            "imgfile": "img/tema1.png"
+            "imgfile": "../images/tests/53.JPG"
         },
         {
             "id": 54,
@@ -3567,7 +3567,7 @@
                 {"id": 3, "answer": "ps aux | echo ptuset", "correct": false},
                 {"id": 4, "answer": "None of the above", "correct": false}
             ],
-            "imgfile": "img/tema1.png"
+            "imgfile": "../images/tests/54.JPG"
         },
         {
             "id": 55,
