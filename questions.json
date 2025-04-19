@@ -3094,7 +3094,7 @@
                 {"id": 3, "answer": "P3, P1, P0, P2", "correct": true},
                 {"id": 4, "answer": "P2, P1, P3, P0", "correct": false}
             ],
-            "imgfile": "images/tests/11.jpg"
+            "imgfile": "images/tests/11.JPG"
         },
         {
             "id": 12,
