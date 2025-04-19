@@ -101,7 +101,6 @@ function nextQuestion() {
 
         if(currentQuestion.imgfile != ""){
             document.getElementById("questionImage").style.display = "block";
-            console.log(currentQuestion.imgfile);
             document.getElementById("questionImg").src = currentQuestion.imgfile;
         }
     }
