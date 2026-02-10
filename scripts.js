@@ -22,6 +22,14 @@ var selectedTema;
 var firstAnswer = true;
 var answered = true;
 
+const menu = document.getElementById("menu");
+const testMenu = document.getElementById("testMenu");
+const finishedPopup = document.getElementById("finished");
+const popupBg = document.getElementById("popupBg");
+const correct = document.getElementById("correct");
+const wrong = document.getElementById("wrong");
+const footer = document.getElementById("footer");
+
 function nextQuestion() {
     if(!answered){
         remindOpen();
@@ -100,7 +108,7 @@ function nextQuestion() {
         currentQuestion = temaFinalcopy.splice(n, 1)[0];
 
         if(currentQuestion.imgfile != ""){
-            document.getElementById("questionImage").style.display = "block";
+            document.getElementById("questionImage").classList.remove("hidden");
             document.getElementById("questionImg").src = currentQuestion.imgfile;
         }
     }
@@ -142,23 +150,23 @@ $(document).ready(function () {
 
 function answer() {
     let selectedAnswer = isChecked();
-    document.getElementById("correct").style.display = "none";
-    document.getElementById("wrong").style.display = "none";
+    correct.classList.add("hidden");
+    wrong.classList.add("hidden");
 
     for (let i = 0; i < 4; i++) {
         if (i === selectedAnswer) {
             if (currentQuestion.answers[i].correct) {
-                document.getElementById("correct").style.display = "block";
+                correct.classList.remove("hidden");
                 if (firstAnswer) {
                     var count = document.getElementById("counterText");
                     var c = count.innerHTML.split("/");
-                    var correct = parseInt(c[0]);
+                    var correctCount = parseInt(c[0]);
                     var total = parseInt(c[1]);
-                    correct++;
-                    count.innerHTML = correct + "/" + total;
+                    correctCount++;
+                    count.innerHTML = correctCount + "/" + total;
                 }
             } else {
-                document.getElementById("wrong").style.display = "block";
+                wrong.classList.remove("hidden");
             }
         }
     }
@@ -172,8 +180,8 @@ function answer() {
 }
 
 function unselect() {
-    document.getElementById("correct").style.display = "none";
-    document.getElementById("wrong").style.display = "none";
+    correct.classList.add("hidden");
+    wrong.classList.add("hidden");
     let answers = document.getElementsByName("answer");
     for (let i = 0; i < 4; i++) {
         answers[i].checked = false;
@@ -199,20 +207,20 @@ function resetQuestions() {
 
 function selectTema(tema) {
     selectedTema = tema;
-    document.getElementById("testMenu").style.display = "block";
-    document.getElementById("menu").style.display = "none";
-    document.getElementById("footer").style.display = "none";
+    testMenu.classList.remove("hidden");
+    menu.classList.add("hidden");
+    footer.classList.add("hidden");
     resetQuestions();
     nextQuestion();
     answered = false;
 }
 
 function tornarMenu() {
-    document.getElementById("testMenu").style.display = "none";
-    document.getElementById("finished").style.display = "none";
-    document.getElementById("popupBg").style.display = "none";
-    document.getElementById("menu").style.display = "block";
-    document.getElementById("footer").style.display = "block";
+    testMenu.classList.add("hidden");
+    menu.classList.remove("hidden");
+    footer.classList.remove("hidden");
+    popupBg.classList.add("hidden");
+    finishedPopup.classList.add("hidden");
     resetCounter();
     answered = true;
 }
@@ -220,7 +228,7 @@ function tornarMenu() {
 function isChecked() {
     let selectedAnswer = null;
 
-    if (document.getElementById("testMenu").style.display != "block") {
+    if (testMenu.classList.contains("hidden")) {
         return;
     }
 
@@ -238,13 +246,13 @@ function isChecked() {
 }
 
 function showFinished() {
-    document.getElementById("finished").style.display = "block";
-    document.getElementById("popupBg").style.display = "block";
+    finishedPopup.classList.remove("hidden");
+    popupBg.classList.remove("hidden");
 }
 
 function retry() {
-    document.getElementById("finished").style.display = "none";
-    document.getElementById("popupBg").style.display = "none";
+    finishedPopup.classList.add("hidden");
+    popupBg.classList.add("hidden");
     resetQuestions();
     resetCounter();
     nextQuestion();
