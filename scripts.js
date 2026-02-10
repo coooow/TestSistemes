@@ -201,6 +201,7 @@ function selectTema(tema) {
     selectedTema = tema;
     document.getElementById("testMenu").style.display = "block";
     document.getElementById("menu").style.display = "none";
+    document.getElementById("footer").style.display = "none";
     resetQuestions();
     nextQuestion();
     answered = false;
@@ -211,6 +212,7 @@ function tornarMenu() {
     document.getElementById("finished").style.display = "none";
     document.getElementById("popupBg").style.display = "none";
     document.getElementById("menu").style.display = "block";
+    document.getElementById("footer").style.display = "block";
     resetCounter();
     answered = true;
 }
