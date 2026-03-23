@@ -106,12 +106,12 @@ function nextQuestion() {
 
         let n = Math.floor(Math.random() * temaFinalcopy.length);
         currentQuestion = temaFinalcopy.splice(n, 1)[0];
+    }
 
-        if(currentQuestion.imgfile != ""){
+    if(currentQuestion.imgfile != ""){
             document.getElementById("questionImage").classList.remove("hidden");
             document.getElementById("questionImg").src = currentQuestion.imgfile;
         }
-    }
 
     qTitle.innerHTML = currentQuestion.question;
     for (let i = 1; i < 5; i++) {
@@ -273,6 +273,6 @@ function remindClose(){
 }
 
 function resetImg(){
-    document.getElementById("questionImage").style.display = "none";
+    document.getElementById("questionImage").classList.add("hidden");
     document.getElementById("questionImg").src = "";
 }
